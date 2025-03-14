@@ -1,0 +1,73 @@
+// Переменные
+$primary-color: #a19271;
+$secondary-color: #f5f5f5;
+$accent-color: #a19271;
+$text-color: #333;
+$light-text: #fff;
+$font-primary: 'Helvetica Neue', Arial, sans-serif;
+$font-secondary: 'Georgia', serif;
+
+// Базовые стили
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-primary;
+  color: $text-color;
+  line-height: 1.6;
+  font-size: 16px;
+  overflow-x: hidden;
+  background-color: #fff;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: $primary-color;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    color: darken($accent-color, 10%);
+  }
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.section {
+  padding: 100px 0;
+  
+  &--light {
+    background-color: $secondary-color;
+  }
+  
+  &--dark {
+    background-color: $primary-color;
+    color: $light-text;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 300;
+  line-height: 1.2;
+  color: $primary-color;
+}
+
+// Секции
+@import 'header';
+@import 'about';
+@import 'portfolio';
+@import 'services';
+@import 'contact';
+@import 'footer'; 
